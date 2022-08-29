@@ -1,0 +1,15 @@
+@use "vars" as *;
+
+body.dark {
+  background-color: $dark-theme-bg;
+  color: $dark-theme-white-text;
+  header::before{
+    background-color: $dark-theme-top-bg ;
+  }
+  .card{
+    background-color: $dark-theme-card-bg;
+    &:hover{
+      background-color: lighten($dark-theme-card-bg , 5%);
+    }
+  }
+}

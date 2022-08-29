@@ -1,0 +1,99 @@
+@use "vars" as *;
+
+@use 'mixins' as *;
+
+.main-dashboard {
+  margin-bottom: 3rem;
+  @include sm-and-down{
+    margin-bottom: 1.5rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.5rem;
+    @include md-and-down{
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 4rem;
+      row-gap: 3rem;
+    }
+    @include sm-and-down{
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 2rem;
+    }
+
+  }
+}
+.card {
+  background-color: $light-theme-card-bg;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 45px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color $transition;
+  cursor: pointer;
+  @include sm-and-down{
+    padding-block: 2rem;
+  }
+
+  &:hover {
+    background-color: darken($light-theme-card-bg, 5%);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    a {
+      font-weight: bold;
+    }
+  }
+  .followers {
+    margin-bottom: 20px;
+    &-count {
+      font-size: 5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    &-caption {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+    }
+  }
+  .stats {
+    font-weight: 600;
+    .icon {
+      margin-right: 5px;
+    }
+    &.up {
+      color: $lime-green;
+    }
+    &.down {
+      color: $bright-red;
+    }
+  }
+  &.facebook::before {
+    background-color: $facebook-border-color;
+  }
+  &.twitter::before {
+    background-color: $twitter-border-color;
+  }
+  &.instagram::before {
+    background-image: $instagram-border-color;
+  }
+  &.youtube::before {
+    background-color: $youtube-border-color;
+  }
+}

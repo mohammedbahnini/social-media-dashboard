@@ -1,0 +1,60 @@
+@use 'mixins' as *;
+
+.overview{
+    .title{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        @include sm-and-down{
+            margin-bottom: 1.5rem;
+          }
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 2.5rem;
+        row-gap: 1.75rem;
+        @include md-and-down{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 4rem;
+            row-gap: 3rem;
+          }
+          @include sm-and-down{
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            row-gap: 1.5rem;
+          }
+        .card{
+            padding: 2rem ;
+            cursor: pointer;
+            @include sm-and-down{
+                padding: 1.5rem;
+            }
+            .header, 
+            .content {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .header{
+                margin-bottom: 2.25rem;
+                @include sm-and-down{
+                    margin-bottom: 1.25rem;
+                }
+                >p {
+                    font-size: 1.125rem;
+                    font-weight: bold;
+                }
+            }
+            .content{
+                align-items: baseline;
+            }
+            .count{
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+}

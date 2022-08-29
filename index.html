@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social Media DashBoard</title>
+
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="">
+    <!-- header begin -->
+    <header>
+      <div class="container">
+        <div>
+          <h1 class="title">Social Media Dashboard</h1>
+          <h3 class="sub-title blue-text">Total Followers: 23,004</h3>
+        </div>
+        <div class="toggle-control">
+          <p class="toggle-text">Dark Mode</p>
+          <div class="toggle">
+            <input type="checkbox" id="toggle" name="toggle" />
+            <label for="toggle"></label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <main>
+      <section class="main-dashboard">
+        <div class="container">
+          <div class="facebook card">
+            <div class="profile">
+              <div class="icon">
+                <img src="images/icon-facebook.svg" alt="Facebook" />
+              </div>
+              <a href="#" class="blue-text">@nathanf</a>
+            </div>
+            <div class="followers">
+              <div class="followers-count">1987</div>
+              <p class="followers-caption blue-text">followers</p>
+            </div>
+            <div class="stats up">
+              <p>
+                <span class="icon"><i class="fa-solid fa-caret-up"></i></span>
+                12 Today
+              </p>
+            </div>
+          </div>
+          <div class="twitter card">
+            <div class="profile">
+              <div class="icon">
+                <img src="images/icon-twitter.svg" alt="Facebook" />
+              </div>
+              <a href="#" class="blue-text">@nathanf</a>
+            </div>
+            <div class="followers">
+              <div class="followers-count">1044</div>
+              <p class="followers-caption blue-text">followers</p>
+            </div>
+            <div class="stats up">
+              <p>
+                <span class="icon"><i class="fa-solid fa-caret-up"></i></span>
+                99 Today
+              </p>
+            </div>
+          </div>
+          <div class="instagram card">
+            <div class="profile">
+              <div class="icon">
+                <img src="images/icon-instagram.svg" alt="Facebook" />
+              </div>
+              <a href="#" class="blue-text">@realnathanf</a>
+            </div>
+            <div class="followers">
+              <div class="followers-count">11k</div>
+              <p class="followers-caption blue-text">followers</p>
+            </div>
+            <div class="stats up">
+              <p>
+                <span class="icon"><i class="fa-solid fa-caret-up"></i></span>
+                1099 Today
+              </p>
+            </div>
+          </div>
+          <div class="youtube card">
+            <div class="profile">
+              <div class="icon">
+                <img src="images/icon-youtube.svg" alt="Facebook" />
+              </div>
+              <a href="#" class="blue-text">Nathan F.</a>
+            </div>
+            <div class="followers">
+              <div class="followers-count">1987</div>
+              <p class="followers-caption blue-text">subscribers</p>
+            </div>
+            <div class="stats down">
+              <p>
+                <span class="icon"><i class="fa-solid fa-caret-down"></i></span>
+                144 Today
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview">
+        <div class="container">
+          <h2 class="title">Overview - Today</h2>
+          <div class="cards">
+            <!-- facebook views -->
+            <div class="card">
+              <div class="header">
+                <p class="blue-text">Page Views</p>
+                <span class="icon">
+                  <img src="images/icon-facebook.svg" alt="Facebookh" />
+                </span>
+              </div>
+              <div class="content">
+                <p class="count">87</p>
+                <div class="stats up">
+                  <p>
+                    <span class="icon"
+                      ><i class="fa-solid fa-caret-up"></i
+                    ></span>
+                    3%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- facebook likes -->
+            <div class="card">
+              <div class="header">
+                <p class="blue-text">Likes</p>
+                <span class="icon">
+                  <img src="images/icon-facebook.svg" alt="Facebookh" />
+                </span>
+              </div>
+              <div class="content">
+                <p class="count">52</p>
+                <div class="stats down">
+                  <p>
+                    <span class="icon"
+                      ><i class="fa-solid fa-caret-up"></i
+                    ></span>
+                        2%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- instagram views -->
+            <div class="card">
+              <div class="header">
+                <p class="blue-text">Likes</p>
+                <span class="icon">
+                  <img src="images/icon-instagram.svg" alt="Instagram" />
+                </span>
+              </div>
+              <div class="content">
+                <p class="count">5462</p>
+                <div class="stats up">
+                  <p>
+                    <span class="icon"
+                      ><i class="fa-solid fa-caret-up"></i
+                    ></span>
+                    2257%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- profile views -->
+            <div class="card">
+              <div class="header">
+                <p class="blue-text">Profile Views</p>
+                <span class="icon">
+                  <img src="images/icon-instagram.svg" alt="Instagram" />
+                </span>
+              </div>
+              <div class="content">
+                <p class="count">52k</p>
+                <div class="stats up">
+                  <p>
+                    <span class="icon"
+                      ><i class="fa-solid fa-caret-up"></i
+                    ></span>
+                    1375%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- retweets -->
+            <div class="card">
+              <div class="header">
+                <p class="blue-text">Retweets</p>
+                <span class="icon">
+                  <img src="images/icon-twitter.svg" alt="Tweets" />
+                </span>
+              </div>
+              <div class="content">
+                <p class="count">117</p>
+                <div class="stats up">
+                  <p>
+                    <span class="icon"
+                      ><i class="fa-solid fa-caret-up"></i
+                    ></span>
+                    303%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- tweeter likes -->
+            <div class="card">
+              <div class="header">
+                <p class="blue-text">Likes</p>
+                <span class="icon">
+                  <img src="images/icon-twitter.svg" alt="Twitter" />
+                </span>
+              </div>
+              <div class="content">
+                <p class="count">507</p>
+                <div class="stats up">
+                  <p>
+                    <span class="icon"
+                      ><i class="fa-solid fa-caret-up"></i
+                    ></span>
+                    553%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- youtube likes -->
+            <div class="card">
+              <div class="header">
+                <p class="blue-text">Likes</p>
+                <span class="icon">
+                  <img src="images/icon-youtube.svg" alt="Youtube" />
+                </span>
+              </div>
+              <div class="content">
+                <p class="count">107</p>
+                <div class="stats down">
+                  <p>
+                    <span class="icon"
+                      ><i class="fa-solid fa-caret-down"></i
+                    ></span>
+                    19%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- youtube views -->
+            <div class="card">
+              <div class="header">
+                <p class="blue-text">Total Views</p>
+                <span class="icon">
+                  <img src="images/icon-youtube.svg" alt="Youtube" />
+                </span>
+              </div>
+              <div class="content">
+                <p class="count">1407</p>
+                <div class="stats down">
+                  <p>
+                    <span class="icon"
+                      ><i class="fa-solid fa-caret-donw"></i
+                    ></span>
+                    12%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const toggle  = document.querySelector('.toggle input[type=checkbox] ');
+      toggle.addEventListener('change' , function(){
+        document.body.classList.toggle('dark');
+      });
+    </script>
+  </body>
+</html>

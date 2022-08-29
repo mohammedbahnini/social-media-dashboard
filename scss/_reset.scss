@@ -1,0 +1,89 @@
+@use "vars" as *;
+
+@use 'mixins' as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  min-height: 100vh;
+  background-color: $light-theme-bg;
+  transition: background-color $transition;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: calc(1100px + (2 * $mobile-padding));
+  padding: 0 $mobile-padding;
+  margin-inline: auto;
+}
+
+.toggle-control{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  @include sm-and-down{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $toggle-light;
+    padding-top: 2rem;
+  }
+  .toggle {
+    > input[type="checkbox"] {
+      display: none;
+      &:checked {
+        +label{
+          background:$toggle-light;
+          &::before {
+            left: calc(100% - 4px - 18px);
+            background-color: white;
+          }
+        }
+  
+      }
+      + label {
+        display: block;
+        width: 48px;
+        height: 24px;
+        background: $toggle-dark;
+        cursor: pointer;
+        border-radius: 24px;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 18px;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background-color: $toggle-indicator;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 4px;
+          transition: 0.2s ease-out;
+        }
+      }
+    }
+  }
+}
+
+
+.blue-text {
+  color: $dark-theme-blue-text;
+}
+.white-text {
+  color: $dark-theme-white-text;
+}
